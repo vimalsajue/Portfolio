@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(image/banner/inside2.svg);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    /* background-color: #131610; */
+    transition: width 0.3s ease;
+}
+
+.navbar:hover {
+    width: 250px;
+}
+
+.navbar ul {
+    list-style: none;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.navbar ul li {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.navbar ul li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar ul li a i {
+    font-size: 24px;
+    margin-right: 20px;
+    transition: transform 1s ease;
+}
+
+.navbar ul li a:hover i {
+    transform: rotate(360deg);
+}
+
+.navbar ul li a span {
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar:hover ul li a span {
+    opacity: 1;
+    color: #fff;
+}
+
+.navbar ul li a:hover {
+    /* background-color: black; */
+    border-radius: 20px 20px 20px 20px;
+    opacity: 1;
+}
+
+.banner-wrapper{
+    padding: 15px;
+}
+.banner-wrapper .heading{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    padding: 20px;
+    color: #fff;
+}
+
+.banner-wrapper .engg{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 100px;
+    color: #fff;
+}
+.banner-wrapper .engg h1{
+    font-size: 110px;
+    margin-right: 15%;
+    font-style: poppins;
+}
+
+.banner-wrapper .engg span{
+    font-size: 50px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.banner-wrapper .engg p{
+    font-size: 20px;
+    padding: 20px;
+}
+
+/* Keyframe for scroll animation */
+@keyframes scroll-in {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+/* Apply animation to the h1 elements in .engg */
+.banner-wrapper .engg h1 {
+    font-size: 110px;
+    margin-right: 15%;
+    animation: scroll-in 1.5s ease-in-out;
+}
+
+/* Apply animation to the p elements in .engg */
+.banner-wrapper .engg p {
+    font-size: 20px;
+    padding: 20px;
+    animation: scroll-in 2s ease-in-out;
+}
+
+/* General body and section animations */
+.banner-wrapper .heading {
+    animation: scroll-in 1.5s ease-in-out;
+}
